@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shashank Upadhyay Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #6F42C1;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Rajana Rama Satya Sai</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+			  <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/Rama-bg.png); opacity: 0.65">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Shashank Upadhyay</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Site Reliability Engineer @ British Petroleum',
+						'Semiconductor-Quantum Electronics Researcher  ',
+						'Quantum computing Enthusiast ',
+						'Certified VLSI Design Verification Engineer',
+						'Information Security Analyst  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 50); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 100);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <!-- <h2>A Seasoned Data Analyst</h2> -->
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://in.linkedin.com/in/shashankupadhyay31/" target="_blank" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/upadhyaay/" target="_blank" class="btn btn-primary py-3 px-4">GitHub</a>
+							<a href="https://drive.google.com/file/d/16qCfxmJOm_dSFmAUJAgH_N9rzzoBjJM_/view" target="_blank" class="btn btn-white py-3 px-4">Resume</a>
+							</p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/Rama.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Shashank Upadhyay</span></p>
+										<p><span class="title-s">Job Role: </span> <span>SRE @ British Petroleum</span></p>
+										<p><span class="title-s">Experience: </span> <span>February 2021 - Present</span></p>
+										<p><span class="title-s">Location: </span> <span>Pune, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>LabVIEW</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Vivado</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Matlab</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Qiskit</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Semiconductor Fabrication</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With 16 months of experience at Tata Consultancy Services as an Assistant Systems Engineer, I honed my skills as an Information Security Analyst from July 2021 to October 2022. Currently, 
+									I am diving deeper into the world of cutting-edge technology as a Master of Science Research student at IIT Delhi, specializing in semiconductor-based quantum devices and semiconductor fabrication, with a minor in VLSI. I'm passionate about pushing the boundaries of innovation and applying my expertise to pioneering advancements in Quantum Computing.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Semiconductor Quantum Devices &amp; VLSI Researcher</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Quantum Technology, Semiconductor Fabrication, Quantum Computing &amp; VLSI</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Masters in Electrical Engineering specializing in Integrated Electronics and Circuits </span></li>
+									<li class="d-flex"><span></span> <span>Bachelor of Engineering in Electronics</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Telugu, Sanskrit</span></li>
+									<li class="d-flex"><span>Tech Skills:</span> <span>LabVIEW, K-Layout, Qiskit, Power point, Python, C, CPP, Verilog HDL, Modelsim, Vivado, Arduino</span></li>
+									<li class="d-flex"><span>Capabilities:</span> <span>Quantum Devices Research, Semiconductor Fabrication, Automation of Instruments, VLSI, Information Security &amp; Research and Development</span></li>
+									<li class="d-flex"><span>Certifications:</span> <span>Certified Qiskit Developer 0.2x by IBM, 
+										Advanced VLSI Design and Verification by Maven Silicon</span></li>
+										<p>
+											<a href="https://www.credly.com/badges/2884e14f-1b92-4cc3-bd76-fe6de63593e7/" target="_blank" class="btn btn-primary py-3 px-4">QGSS-2023</a>
+											<a href="https://www.virtualbadge.io/certificate-validator?credential=c1699272-6da6-47b9-8b86-1ca257c8193c" target="_blank" class="btn btn-primary py-3 px-4">Womanium Quantum+AI '24</a>
+											<a href="https://www.credly.com/badges/42cd36c5-7a51-4ed8-b94e-c7f78b3493a1/" target="_blank" class="btn btn-primary py-3 px-4">QGSS-2024</a>
+											<a href="https://www.credly.com/badges/8d8417df-3473-4b17-9d2f-5335dc676f55/" target="_blank" class="btn btn-primary py-3 px-4">IBM Quantum Challenge 2024</a>
+											<a href="https://www.credly.com/earner/earned" target="_blank" class="btn btn-primary py-3 px-4">Others</a>
+										</p>
+										
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Experience</h1>
+					<h2 class="mb-4">Experience</h2>
+					<p>As an experienced professional, I previously worked at Tata Consultancy Services as an Assistant Systems Engineer, focusing on Information Security Analysis to ensure data protection and mitigate security threats. Currently, I am pursuing a Master of Science Research in Electrical Engineering at IIT Delhi,
+						 specializing in semiconductor-based quantum devices and semiconductor fabrication, with a minor in VLSI. My skill set includes LabVIEW, Python, semiconductor fabrication, quantum electronics, quantum computing, and VLSI. I am dedicated to advancing these fields through innovative research and practical applications.</p>
+					<div class="row justify-content-center mt-5">
+						<div class="col-md-6 text-center ftco-animate">
+							<p><a href="https://drive.google.com/file/d/16qCfxmJOm_dSFmAUJAgH_N9rzzoBjJM_/view" target="_blank" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+						</div>  
+					</div>
+			
+				</div>
+
+        	</div>
+
+			<div class="row">
+				<h1 class="big-4">Professional Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+		
+		<div class="row">
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">TATA Consultancy Services</span>
+						<h2>Assistant Systems Engineer - Information Security Analyst</h2>
+						<span class="position">July 2021 - October 2022</span>
+						<p class="mt-4">Techincal Security Auditing,
+							Network infrastructure review, Incident Managment
+							related to Information security, Change
+							managment process, Information Security
+							Compliance Governance. 
+							<ul>
+								<li>Worked as an Information Security Analyst, ensuring data protection and mitigating security threats.</li>
+								<br>
+								<li>Analyzed security incidents and implemented corrective measures.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				
+
+		</div>
+
+		<br>
+		<br>
+    		
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="education-section">
+    	<div class="container">	
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Education</h1>
+					<h2 class="mb-4">Education</h2>
+				</div>
+			</div>
+			
+			<br>
+			
+				<div class="row">
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">Indian Institute of Technology Delhi, India</span>
+							<h2>Master of Science in Electrical Engineering</h2>
+							<span class="position">July 2024 - July 2026 (Tentative)</span>
+							<p class="mt-4">CGPA: 8.667/10.0</p>
+							<span class="position">Learnings</span>
+								<ul>
+									Semiconductor Fabrication Technology, 
+									Qauntum Electronics, 
+									Quantum Communication, 
+									Semiconductor Physics, 
+									Quantum Computation, 
+									CAD for VLSI, 
+								</ul>
+							</p>
+	
+	
+						</div>
+					</div>
+	
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">SASTRA Deemed To Be University - Thanjavur, India</span>
+							<h2>Bachelor of Technology in Electrical and Electronics Engineering</h2>
+							<span class="position"> July 2017 - July 2021</span>
+							<p class="mt-4">CGPA: 8.225/10.0</p>
+							<span class="position">Learnings</span>
+								<ul>
+									Digital Electronics,
+									C & C++, 
+									Python,  
+									Device Physics, 
+									Power Systems, 
+									Controls Systems, 
+									Signals and Systems, 
+									Image Processing,
+									Basics of Communication
+								</ul>
+						</div>
+					</div>
+				</div>
+
+		</div>
+   
+	</section>
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>I have worked on various projects that helped me sharpen analytic skillset and thinking. Would be happy to hear your thoughts!</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="link will be updated soon" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/Router_image.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="link will be updated soon" target="_blank">Router 1x3 RTL Design and Verification</a></h3>
+				<p>The router accepts data packets on a 
+					single 8-bit port and routes them to one 
+					of the three output channels, channel0, 
+					channel1 and channel2. </p>
+				<p><b>Skills:</b> Verilog, System Verilog, Vivado, Quartus Prime, Modelsim</p>
+				</p>
+				<p><a href="link will be updated soon" target="_blank" class="btn btn-primary py-3 px-5">Report</a></p>
+			</div>
+			
+            </div> 
+		</div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="link will be updated soon" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/Communication\ Protocol.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="link will be updated soon" target="_blank">AHB-APB Bridge Protocol Verification</a></h3>
+                <p>We use UVM to create a testbench that checks the AHB-APB Bridge protocol compliance. This ensures the bridge meets specifications and improves SoC reliability.</p>
+				<p><b>Skills:</b> Verilog, System Verilog, UVM, Questa Sim</p>
+				
+				<p><a href="link will be updated soon" target="_blank" class="btn btn-primary py-3 px-5">Report</a></p>
+			</div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="link will be updated soon" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/Quantum\ Image.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="link will be updated soon" target="_blank">Quantum Random Number Generation and Image processing 
+					 </a></h3>
+                <p>	Quantum circuits use superposition and entanglement to generate secure random numbers, preventing data theft. They also convert classical images to quantum data, enabling faster image processing.</p>
+				<p><b>Skills:</b> Qiskit, Python, Image Processing</p>
+				<p><a href="link will be updated soon" target="_blank" class="btn btn-primary py-3 px-5">Report</a></p>
+			
+			</div>
+            </div>
+          </div>
+        </div>
+	
+	  <br>
+	  <br>
+	  <br>
+	  <div class="row justify-content-center">
+		<div class="col-md-7 ftco-animate text-center">
+			<h2>More projects on<span> Github  </span> </h2>
+			<br>
+			<p><a href="https://github.com/ramasatyasai?tab=repositories" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
+			</div>
+		</div>
+	</div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4"><a href="mailto:shashankupadhyay50@gmail.com" target="_blank">Location</a></h3>
+	            <p><a>Pune, India</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4"><a href="mailto:shashankupadhyay50@gmail.com" target="_blank">Contact Number</a></h3>
+	            <p><a>+91 00000 00000</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4"><a href="mailto:shashankupadhyay50@gmail.com" target="_blank">Email Address</a></h3>
+	            <p><a href="mailto:shashankupadhyay50@gmail.com" target="_blank">shashankupadhyay50@gmail.com</a></p>
+				<p><a href="mailto:eey247517@iitd.ac.in" target="_blank">eey247517@iitd.ac.in</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4"><a href="https://drive.google.com/file/d/16qCfxmJOm_dSFmAUJAgH_N9rzzoBjJM_/view" target="_blank">Download CV</a></h3>
+	            <p><a href="https://drive.google.com/file/d/16qCfxmJOm_dSFmAUJAgH_N9rzzoBjJM_/view" target="_blank">Resume</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<!-- Updated Form HTML with better alignment -->
+			<!-- Form HTML with updated styles for proper alignment -->
+
+			<!--
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2 style="color: white;">Have a Question?</h2>
+					<p>Let's connect!</p>
+					<form action="link will be updated soon" method="POST" style="max-width: 500px; margin: 20px auto; padding: 20px; background-color: #000000; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+						<div style="margin-bottom: 15px; text-align: left;">
+							<label for="email" style="color: white; margin-bottom: 5px;">Your email:</label>
+							<input type="email" name="email" id="email" style="width: 100%; padding: 10px; border: 2px solid #ccc; border-radius: 4px; background-color: white;">
+						</div>
+						<div style="margin-bottom: 20px; text-align: left;">
+							<label for="message" style="color: white; margin-bottom: 5px;">Your message:</label>
+							<textarea name="message" id="message" style="width: 100%; height: 100px; padding: 10px; border: 2px solid #ccc; border-radius: 4px; background-color: white;"></textarea>
+						</div>
+						<button class="btn btn-primary py-3 px-4">Send</button>
+					</form>
+				</div>
+			</div>
+		-->
+
+
+					
+				
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate"><a href="https://in.linkedin.com/in/shashankupadhyay31/" target="_blank"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://github.com/upadhyaay/" target="_blank"><span class="icon-github"></span></a></li>   
+					  <li class="ftco-animate"><a href="https://www.instagram.com/__shashaaankk/" target="_blank"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
